@@ -17,7 +17,7 @@ const AnimateScrollData = [
     { title: 'Node', icon: iconNode },
     { title: 'Docker', icon: iconDocker },
     { title: 'Postgress', icon: iconPostgress },
-    { title: 'Mysql', icon: iconMysql }
+    { title2: 'Mysql', icon: iconMysql }
 ];
 export function AnimateScroll() {
     const duplicatedData = [...AnimateScrollData, ...AnimateScrollData];
@@ -44,7 +44,7 @@ export function AnimateScroll() {
     }, []);
 
     return (
-        <div className="py-4 mt-4 bg-[#333333] w-full overflow-hidden">
+        <div className="py-4 md:py-4 mt-4 bg-[#333333] w-full overflow-hidden shadow-2xl">
             <motion.div
                 ref={containerRef}
                 className="flex gap-20"
@@ -56,7 +56,7 @@ export function AnimateScroll() {
                         key={index}
                         className="flex items-center gap-1 justify-center flex-shrink-0"
                     >
-                        <img src={item.icon} alt={item.title} className="w-13 h-20" />
+                        <img src={item.icon} alt={item.title} className="w-13" />
                         <h2 className="text-2xl font-semibold text-[#D9D9D9]">
                             {item.title}
                         </h2>
