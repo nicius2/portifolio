@@ -28,9 +28,8 @@ const NavItem = ({
 
   return (
     <div
-      className={`${baseClass} ${
-        active ? '' : 'hover:bg-zinc-100 dark:hover:bg-zinc-800'
-      }`}
+      className={`${baseClass} ${active ? '' : 'hover:bg-zinc-100 dark:hover:bg-zinc-800'
+        }`}
       onClick={onClick}
     >
       {children}
@@ -44,7 +43,7 @@ export function Navbar() {
 
   return (
     <div className="w-full flex justify-center">
-      <div className="items-center justify-center border border-[#919191] bg-white/4 py-3 px-4 backdrop-blur-[1.5px] rounded-3xl">
+      <div className="items-center justify-center border border-[#919191]/30 bg-white/4 py-3 px-4 backdrop-blur-[1.5px] rounded-2xl">
         {/* Navbar para Desktop */}
         <div className="hidden md:flex gap-10">
           {navbarData.map(item => (
@@ -53,7 +52,7 @@ export function Navbar() {
               active={activeItem === item.id}
               onClick={() => setActiveItem(item.id)}
             >
-              <a href={item.id} className="text-gray-200 text-md">
+              <a href={item.id} className="text-gray-200 text-md font-semibold text-sm">
                 {item.link}
               </a>
             </NavItem>

@@ -1,17 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Jaldi:wght@400;700&display=swap');
 @import "tailwindcss";
 
-@theme {
-    --default-font-family: "Inter", sans-serif;
-    --color-gray-200: #E6E6E6;
+/* Classes utilitárias para Jaldi */
+@layer utilities {
+    .font-jaldi-regular {
+        font-family: 'Jaldi', sans-serif;
+    }
 
+    .font-jaldi-bold {
+        font-family: 'Jaldi', sans-serif;
+        font-weight: 700;
+    }
+
+    .shimmer-mask {
+        position: relative;
+        overflow: hidden;
+        /* garante que o brilho não vaze */
+    }
+
+    .shimmer-mask::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(90deg,
+                transparent 0%,
+                rgba(255, 255, 255, 0.7) 50%,
+                transparent 100%);
+        mix-blend-mode: lighten;
+        pointer-events: none;
+        animation: shine 4s ease-in-out infinite;
+    }
+
+    @keyframes shine {
+        0% {
+            transform: translateX(-100%);
+        }
+
+        20% {
+            transform: translateX(100%);
+            /* passa rápido */
+        }
+
+        100% {
+            transform: translateX(100%);
+            /* pausa */
+        }
+    }
+
+    .animate-bounce {
+        animation: bounce 1s infinite;
+    }
+
+    @keyframes bounce {
+
+        0%,
+        100% {
+            transform: translateY(-25%);
+            animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+        }
+
+        50% {
+            transform: translateY(0);
+            animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+        }
+    }
 }
 
-/* src/styles.css */
+body {
+    font-family: 'Inter', sans-serif;
+}
+
 @media (max-width: 767px) {
     .bg-mobile {
         background-image: url('./assets/bg.svg');
-        /* coloque a imagem no public */
         background-size: cover;
         background-position: center;
+    }
+}
+
+@media (min-width: 1024px) {
+    .bg-desktop {
+        background-image: url('./assets/bgDesktop.svg');
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: top;
     }
 }
