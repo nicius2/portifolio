@@ -1,3 +1,5 @@
+// src/components/Header.jsx
+
 import { Navbar } from "./Navbar";
 import { EmojiDevelopment } from "./EmojiDevelopment";
 import { ArrowDown } from "lucide-react";
@@ -5,18 +7,18 @@ import meuEmoji from "../assets/emojiVini.svg";
 import fotoDePerfil from "../assets/Foto-de-Perfil-Desktop.svg";
 import fotoDePerfilMobile from "../assets/Foto-de-Perfil-Mobile.svg";
 import iconDownload from "../assets/download.svg";
-import { AnimateScroll } from "./animateScroll";
+import { AnimateScroll } from "../hooks/animateScroll";
 
 
 export function Header() {
   return (
-    <div className="relative bg-mobile w-screen h-screen pt-10">
+    // Remova a classe h-screen para permitir que o conteúdo se expanda e a página role
+    <div className="relative bg-mobile w-screen pt-10">
       <Navbar />
 
       {/* Header Desktop */}
       <div className="hidden md:flex mt-20 justify-center">
-        <div className="flex min-w-5xl justify-between bg-desktop"
-        >
+        <div className="flex min-w-5xl justify-between bg-desktop">
 
           <div className="flex flex-col gap-2 mt-12">
             <div>

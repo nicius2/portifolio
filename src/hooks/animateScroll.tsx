@@ -17,24 +17,28 @@ const AnimateScrollData = [
     { title: 'Node', icon: iconNode },
     { title: 'Docker', icon: iconDocker },
     { title: 'Postgress', icon: iconPostgress },
-    { title2: 'Mysql', icon: iconMysql }
+    { title: 'Mysql', icon: iconMysql } // Corrigido o título
 ];
+
 export function AnimateScroll() {
     const duplicatedData = [...AnimateScrollData, ...AnimateScrollData];
     const containerRef = useRef<HTMLDivElement>(null);
-    const [duration, setDuration] = useState(8); // velocidade mobile
+    const [duration, setDuration] = useState(20); // Duração inicial para desktop
     const [width, setWidth] = useState(0);
 
     useEffect(() => {
         const handleResize = () => {
+            // Ajusta a duração com base na largura da tela
             if (window.innerWidth < 768) {
-                setDuration(30); // mais rápido ainda
+                setDuration(30); // Velocidade para mobile
             } else {
-                setDuration(40);
+                setDuration(40); // Velocidade para desktop
             }
 
+            // Calcula a largura de uma única lista para a animação de loop
             if (containerRef.current) {
-                setWidth(containerRef.current.scrollWidth / 1); // metade da lista
+                // A largura da animação é a metade da largura total (lista duplicada)
+                setWidth(containerRef.current.scrollWidth / 2);
             }
         };
 
@@ -48,7 +52,8 @@ export function AnimateScroll() {
             <motion.div
                 ref={containerRef}
                 className="flex gap-20"
-                animate={{ x: [-0, -width] }}
+                // Animação de x de 0 até o negativo da largura de uma lista
+                animate={{ x: [0, -width] }}
                 transition={{ repeat: Infinity, ease: "linear", duration }}
             >
                 {duplicatedData.map((item, index) => (

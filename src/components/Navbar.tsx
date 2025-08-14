@@ -9,7 +9,7 @@ import { ResponsiveNavbar } from './responsiveNavbar';
 import { AnimatedHamburger } from './animateHamburguer';
 
 const navbarData = [
-  { id: '1', link: 'Sobre mim' },
+  { id: '#sobremim', link: 'Sobre mim' },
   { id: '2', link: 'Projetos' },
   { id: '3', link: 'Certificados' },
 ];
