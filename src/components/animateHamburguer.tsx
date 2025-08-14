@@ -35,21 +35,24 @@ export function AnimatedHamburger({ isOpen, setIsOpen }: AnimatedHamburgerProps)
       className="flex flex-col justify-center items-center w-6 h-6 z-50 relative md:hidden"
     >
       <motion.div
+        layout // Adicione o 'layout' aqui para otimizar a animação
         variants={barVariants}
         animate={isOpen ? 'bar' : 'closed'}
         custom={1}
-        className="bg-gray-200 h-0.5 w-full rounded-sm my-[2px]" // removido 'absolute' e adicionado 'my-[2px]'
+        className="bg-gray-200 h-0.5 w-full rounded-sm my-[2px]"
       />
       <motion.div
+        layout // Adicione o 'layout' aqui
         variants={barVariants}
         animate={isOpen ? 'middleBar' : 'closed'}
-        className="bg-gray-200 h-0.5 w-full rounded-sm my-[2px]" // removido 'absolute' e adicionado 'my-[2px]'
+        className="bg-gray-200 h-0.5 w-full rounded-sm my-[2px]"
       />
       <motion.div
+        layout // Adicione o 'layout' aqui
         variants={barVariants}
         animate={isOpen ? 'bar' : 'closed'}
         custom={-1}
-        className="bg-gray-200 h-0.5 w-full rounded-sm my-[2px]" // removido 'absolute' e adicionado 'my-[2px]'
+        className="bg-gray-200 h-0.5 w-full rounded-sm my-[2px]"
       />
     </button>
   );
