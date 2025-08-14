@@ -1,9 +1,12 @@
 import { Navbar } from "./Navbar";
+import { EmojiDevelopment } from "./EmojiDevelopment";
 import { ArrowDown } from "lucide-react";
 import meuEmoji from "../assets/emojiVini.svg";
 import fotoDePerfil from "../assets/Foto-de-Perfil-Desktop.svg";
 import fotoDePerfilMobile from "../assets/Foto-de-Perfil-Mobile.svg";
 import iconDownload from "../assets/download.svg";
+import { AnimateScroll } from "./animateScroll";
+
 
 export function Header() {
   return (
@@ -21,14 +24,7 @@ export function Header() {
                 Óla, eu sou Vinícius Campos
               </h3>
 
-              <div className="relative w-fit flex gap-2 items-center my-2 py-2 px-2 border-[0.25px] border-[#919191]/30 bg-white/4 rounded-3xl overflow-hidden shimmer-mask">
-                <span>
-                  <img src={meuEmoji} alt="Emoji do programador" />
-                </span>
-                <span className="font-semibold text-[#919191] text-sm">
-                  Desenvolvedor Full-Stack
-                </span>
-              </div>
+              <EmojiDevelopment meuEmoji={meuEmoji} titulo="Desenvolvedor Full-Stack" />
             </div>
 
             <h1 className="text-3xl text-white font-semibold tracking-[0.50px]">Desenvolvo aplicações <br />
@@ -56,14 +52,7 @@ export function Header() {
           Óla, eu sou Vinícius Campos
         </h3>
 
-        <div className="relative w-fit flex gap-2 items-center my-2 py-2 px-2 border-[0.25px] border-[#919191]/30 bg-white/4 rounded-3xl overflow-hidden shimmer-mask">
-          <span>
-            <img src={meuEmoji} alt="Emoji do programador" className="w-4" />
-          </span>
-          <span className="font-semibold text-[#919191] text-xs">
-            Desenvolvedor Full-Stack
-          </span>
-        </div>
+        <EmojiDevelopment meuEmoji={meuEmoji} titulo="Desenvolvedor Full-Stack" />
 
         <div className="flex mt-4 justify-center">
           <img src={fotoDePerfilMobile} alt="foto de perfil mobile" className="w-30" />
@@ -76,10 +65,13 @@ export function Header() {
 
       </div>
 
-      <div className="flex items-center mt-8 justify-center md:mt-2 flex-col gap-2">
+      <div className="flex items-center mt-8 justify-center md:mt-10 flex-col gap-2">
         <span className="text-zinc-300/90 text-sm font-jaldi-regular">Saber mais</span>
         <ArrowDown size={16} color="#FFFF" className="lucide lucide-arrow-down animate-bounce" />
       </div>
+
+      <AnimateScroll />
+
     </div >
   );
 }
