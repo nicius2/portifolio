@@ -84,7 +84,7 @@ export function Navbar() {
         {/* Navbar para Mobile */}
         <div className="md:hidden flex items-center justify-between gap-10">
           <div>
-            <img src={imgPerfilNavbar} alt="minha imagem pequena" />
+            <img src={imgPerfilNavbar} alt="minha imagem pequena" className='w-10 h-10' />
           </div>
 
           <div className="flex gap-1">

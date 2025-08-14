@@ -19,13 +19,13 @@ export function ResponsiveNavbar({ setIsOpen }: ResponsiveNavbarProps) {
       initial={{ y: '100%' }}
       animate={{ y: '0%' }}
       exit={{ y: '100%' }}
-      transition={{ type: 'spring', stiffness: 200, damping: 25 }}
+      transition={{ type: 'tween', stiffness: 200, damping: 25 }}
       onClick={() => setIsOpen(false)}
       className="fixed inset-0 bg-opacity-75 z-40 md:hidden"
     >
       <div 
         onClick={(e) => e.stopPropagation()} 
-        className="absolute bottom-0 right-0 h-[80%] border-t-2 border-zinc-700 w-full bg-zinc-800/70 rounded-t-3xl shadow-lg p-4 flex flex-col backdrop-blur-md"
+        className="absolute bottom-0 right-0 h-[80%] border-t-2 border-zinc-700 w-full bg-zinc-800/70 rounded-t-3xl shadow-lg p-4 flex flex-col backdrop-blur-md transform translate-z-0"
       >
         {/* Adicione a barrinha aqui */}
         <div className="flex justify-center mb-6">
