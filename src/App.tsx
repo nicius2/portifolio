@@ -1,6 +1,5 @@
-// src/App.jsx
-
 import { Header } from "./components/Header";
+import { FeaturedWorks } from "./components/FeaturedWorks";
 import { SobreMim } from "./components/sobreMim";
 
 export default function App() {
@@ -9,6 +8,7 @@ export default function App() {
     <div className="w-screen h-screen flex flex-col bg-zinc-900 overflow-x-hidden">
       <Header />
       <SobreMim />
+      <FeaturedWorks />
     </div>
   )
 }
