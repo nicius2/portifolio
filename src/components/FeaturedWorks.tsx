@@ -19,15 +19,15 @@ export function FeaturedWorks() {
                 </span>
             </div>
 
-            <div className="flex md:flex-row flex-col gap-10 w-[60rem]">
+            <div className="flex md:flex-row flex-col gap-10 md:w-[60rem]">
 
                 {featuredWorksData.map((item) => (
-                    <div className="p-10 flex flex-col border-[0.5px] gap-4 backdrop-blur-[1.5px] bg-white/4 border-[#919191]/30 rounded-3xl">
+                    <div className="md:p-10 p-7 flex justify-center flex-col border-[0.5px] gap-4 backdrop-blur-[1.5px] bg-white/4 border-[#919191]/30 rounded-3xl">
                         <div>
                             <img
                                 src={item.img}
                                 alt={item.title}
-                                className="w-4xl"
+                                className="md:w-4xl w-sm"
                             />
                         </div>
 
