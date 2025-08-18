@@ -1,5 +1,4 @@
-// src/components/AnimatedSection.jsx
-import { motion, AnimatePresence, easeOut } from 'framer-motion';
+import { motion, easeOut } from 'framer-motion';
 
 const containerVariants = {
     hidden: { opacity: 0, y: 50 },
