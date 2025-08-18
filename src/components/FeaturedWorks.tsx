@@ -140,7 +140,7 @@ export function FeaturedWorks() {
                   <div className="flex flex-col gap-4">
                     <div className="flex gap-4">
                       <h2 className="text-white text-2xl font-medium">{item.title}</h2>
-                        <button className="flex gap-2 items-center text-sm md:px-4 px-2 rounded-sm bg-white">
+                        <button className="flex gap-2 items-center text-sm md:px-4 cursor-pointer px-2 rounded-sm bg-white">
                           <span className="hidden md:flex">Ver Projeto</span>
                           <span className=""><img src={webProject} alt="icone de abrir projeto" className=""/></span>
                           </button>
