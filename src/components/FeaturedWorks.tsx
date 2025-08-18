@@ -13,13 +13,6 @@ const featuredWorksData = [
   },
   {
     id: '#',
-    title: "Codel.ink",
-    tecnologias: ['Laravel', 'MySQL', 'LiveWire', 'Tailwind'],
-    img: projeto1,
-    description: 'Intranet em Laravel para gestão de notícias, reservas, links e unidades organizacionais.'
-  },
-  {
-    id: '#',
     title: "Projeto 3",
     tecnologias: ['React', 'Node.js', 'MongoDB'],
     img: projeto1,
