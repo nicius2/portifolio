@@ -2,13 +2,13 @@ import imgFaculdade from "../assets/ahanguera.svg"
 
 export function Academico() {
     return (
-        <div className="my-10 text-white md:w-[1000px] md:gap-0 gap-2 md:ml-40 flex flex-col relative">
+        <div id="certificados" className="my-10 text-white md:w-[1000px] md:gap-0 mx-8 gap-2 md:ml-40 flex flex-col relative">
             <h2 className="text-2xl font-semibold mb-2">Formações Acadêmica</h2>
             <div className="flex justify-between items-center">
                 <h3 className="md:text-sm text-xs font-semibold md:text-medium">Bacharelado - Ciência da Computação</h3>
                 <div className="flex  gap-4 items-center">
                     <img src={imgFaculdade} alt="imagem da faculdade" className="md:w-10 w-8" />
-                    <span className="text-xs font-semibold">Ahanguera - Presencial</span>
+                    <span className="text-xs md:font-semibold">Ahanguera - Presencial</span>
                 </div>
             </div>
             <span className="md:text-sm text-xs">2024 - 2028 (em andamento)</span>

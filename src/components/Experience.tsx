@@ -3,16 +3,18 @@ import imgJovemTech from "../assets/imgTech.svg";
 
 const experienceData = [
     { id: '#', img: imgEducacao, title: 'Software Developer Mobile', ano: '(jan 2021 -  fev 2023)', subTitle: 'Secretária de Educação de Paulino Neves', descrição: ['- Desenvolvedor  de interface interativas usando FlutterFlow e Figma', '- Manuntenção de Código em Flutter e banco de Dados no Supabase'] },
-    { id: '#', img: imgJovemTech, title: 'Bolsista Jovem Tech', ano: '(maio 2025 - o momento)', subTitle: 'Aprimoramento com treinamentos em competências técnicas e habilidades comportamentais', descrição: ['- Estudo e projetos reais com criação e implementação de APIs REST com Java', 
-        '- Projetos com elaboração de interface usando React para consumir API e apresentar dados de forma interativa e responsiva ao usuário',
-        '- Desenvolvimento de Tasks usando metodologias Ágeis.']}
+    {
+        id: '#', img: imgJovemTech, title: 'Bolsista Jovem Tech', ano: '(maio 2025 - o momento)', subTitle: 'Aprimoramento com treinamentos em competências técnicas e habilidades comportamentais', descrição: ['- Estudo e projetos reais com criação e implementação de APIs REST com Java',
+            '- Projetos com elaboração de interface usando React para consumir API e apresentar dados de forma interativa e responsiva ao usuário',
+            '- Desenvolvimento de Tasks usando metodologias Ágeis.']
+    }
 ]
 
 
 export function Experience() {
     return (
-        <div className="my-10 md:ml-40 flex flex-col items-center md:items-start">
-                <h1 className="text-3xl mb-5 font-semibold text-white">Experiências</h1>
+        <div id="projetos" className="my-10 md:ml-40 flex flex-col items-center md:items-start">
+            <h1 className="text-3xl mb-5 font-semibold text-white">Experiências</h1>
             <div className="text-white flex flex-col gap-15">
 
                 {experienceData.map((item) => (

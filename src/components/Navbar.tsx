@@ -10,8 +10,8 @@ import { AnimatedHamburger } from './animateHamburguer';
 
 const navbarData = [
   { id: '#sobremim', link: 'Sobre mim' },
-  { id: '2', link: 'Projetos' },
-  { id: '3', link: 'Certificados' },
+  { id: '#projetos', link: 'Projetos' },
+  { id: '#certificados', link: 'Certificados' },
 ];
 
 const NavItem = ({

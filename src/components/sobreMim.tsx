@@ -1,6 +1,6 @@
 export function SobreMim() {
     return (
-        <div id="projetos" className="h-screen text-white flex items-center justify-center flex-col">
+        <div id="sobremim" className="h-screen text-white flex items-center justify-center flex-col">
             <h1 className="text-3xl font-semibold my-10">Sobre mim</h1>
 
             <div className="md:w-[800px] w-[380px] p-4 text-sm rounded-xl border-[0.5px] mb-10 border-[#919191] bg-[#333333]/10 flex flex-col gap-4">
