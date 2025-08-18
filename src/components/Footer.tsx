@@ -28,7 +28,7 @@ export function Footer() {
 
     return (
         <div className="flex items-center flex-col justify-center mx-30 mt-20">
-            <div className="w-4xl items-center justify-center border border-[#919191]/30 bg-white/4 py-3 px-4 backdrop-blur-[1.5px] rounded-2xl">
+            <div className="md:w-4xl items-center w-100  justify-center border border-[#919191]/30 bg-white/1 py-3 px-4 backdrop-blur-[1.5px] rounded-3xl md:rounded-2xl">
                 <div className="mx-8">
                     <h3 className="text-2xl md:py-8 py-4 text-white">
                         Vamos Trabalhar Juntos
@@ -37,7 +37,7 @@ export function Footer() {
                     <div className="border items-center justify-between border-[#919191]/30 bg-white/4 py-3 px-4 flex gap-3 backdrop-blur-[1.5px] rounded-xl">
                         <div className="flex gap-4 items-center">
                             <Mail className="h-5 w-5 text-gray-400" />
-                            <span className="text-gray-300 select-none">
+                            <span className="text-gray-300 select-none text-sm">
                                 {email}
                             </span>
                         </div>
@@ -47,11 +47,9 @@ export function Footer() {
                             className="border border-[#919191]/30 hover:bg-zinc-700 transition ease-linear hover:border-zinc-700 bg-white/4 p-2 flex gap-3 backdrop-blur-[1.5px] rounded-xl"
                         >
                             {/* AQUI ESTÁ A CORREÇÃO: o ícone agora muda com base no estado 'copied' */}
-                            {copied ? (
-                                <Check className="h-5 w-5 text-green-400" />
-                            ) : (
-                                <Copy className="h-5 w-5 text-gray-400" />
-                            )}
+
+                            <Copy className="h-5 w-5 text-gray-400" />
+
                         </button>
                     </div>
 
