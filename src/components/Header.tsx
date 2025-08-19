@@ -46,15 +46,17 @@ export function Header() {
 
             <motion.a
               href="https://drive.google.com/file/d/1YJluqetsRlRdLrRlEbByi3HuONmI-LQO/view?usp=sharing"
-              className="w-fit flex gap-2 mt-8 bg-gray-200 hover:bg-gray-300 transition ease-linear px-3.5 py-2 rounded-[8px]
-              text-sm font-semibold text-[#333333] justify-center items-center"
+              className="w-fit flex gap-2 mt-8 p-0 gradient-button-stroke button-shadow rounded-[8px]"
               initial={{ opacity: 0, y: 40 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.9, delay: 0.4, ease: "easeOut" }}
             >
-              Baixar Curriculo
-              <span><img src={iconDownload} alt="Icone de Download" className="text-[#333333]" /></span>
+              <div className="w-full h-full flex gap-2 px-3.5 py-2 rounded-[6px] gradient-button-fill text-zinc-900 justify-center items-center">
+                <span className="font-semibold text-shadow">Baixar Curriculo</span>
+                <span><img src={iconDownload} alt="Icone de Download" className="text-[#333333]" /></span>
+              </div>
             </motion.a>
+
           </motion.div>
 
           {/* Imagem com animação */}
