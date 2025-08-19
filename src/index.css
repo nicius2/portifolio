@@ -13,16 +13,19 @@
     }
 
     .glassmorphism-border {
-  /* Fundo semitransparente */
-  background: rgba(199, 196, 196, 0.1);
-  /* Sombra interna para o brilho sutil da borda */
-  box-shadow: inset 0 0 10px rgba(36, 34, 34, 0.733),
-              0 0 10px rgba(36, 32, 32, 0.2); /* Sombra externa para a profundidade */
-  /* Efeito de desfoque (Blur) para o vidro fosco */
-  backdrop-filter: blur(5px);
-  -webkit-backdrop-filter: blur(5px); /* Suporte para Safari */
-  border: 1px solid rgba(54, 53, 53, 0.445); /* Borda transparente para separar do fundo */
-}
+        /* Fundo semitransparente */
+        background: rgba(199, 196, 196, 0.1);
+        /* Sombra interna para o brilho sutil da borda */
+        box-shadow: inset 0 0 10px rgba(36, 34, 34, 0.733),
+            0 0 10px rgba(36, 32, 32, 0.2);
+        /* Sombra externa para a profundidade */
+        /* Efeito de desfoque (Blur) para o vidro fosco */
+        backdrop-filter: blur(5px);
+        -webkit-backdrop-filter: blur(5px);
+        /* Suporte para Safari */
+        border: 1px solid rgba(54, 53, 53, 0.445);
+        /* Borda transparente para separar do fundo */
+    }
 
 
     .font-jaldi-bold {
@@ -171,6 +174,6 @@ body {
         background-image: url('./assets/bgDesktop.svg');
         background-size: contain;
         background-repeat: no-repeat;
-        background-position: top;
+        background-position: center;
     }
 }

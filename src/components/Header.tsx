@@ -96,7 +96,7 @@ export function Header() {
       </motion.div>
 
       <div className="flex items-center mt-8 justify-center md:mt-10 flex-col gap-2">
-        <span className="text-zinc-300/90 text-sm font-jaldi-regular">Saber mais</span>
+        <span className="text-zinc-300/90 text-xs">Saber mais</span>
         <ArrowDown size={16} color="#FFFF" className="lucide lucide-arrow-down animate-bounce" />
       </div>
 
