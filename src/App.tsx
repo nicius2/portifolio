@@ -12,7 +12,7 @@ import { AnimatedSection } from "./components/AnimatedSection";
 
 export default function App() {
   return (
-    <div className="w-screen h-screen flex flex-col bg-zinc-900 overflow-x-hidden scroll-smooth">
+    <div className="w-screen h-screen flex items-center flex-col bg-zinc-900 overflow-x-hidden scroll-smooth">
       <Header />
       <AnimatedSection>
         <SobreMim />
