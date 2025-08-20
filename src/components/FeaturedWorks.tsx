@@ -2,33 +2,36 @@ import { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Play, X, Maximize2, ExternalLink } from "lucide-react";
 
-// Simulando os imports de assets
-const projeto1 = "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop&crop=entropy&auto=format";
-
 const featuredWorksData = [
   {
     id: '#',
     title: "Extensão Foco Já",
     tecnologias: ['React', 'Tailwindcss', 'Figma', 'Typescript'],
-    img: projeto1,
+    img: "https://i.ibb.co/bRC6MLbj/image-2.jpg",
     videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4",
-    description: 'Extensão de organização com todo-list, pomodoro e notas que pode ser exportado como PDF.'
+    description: 'Extensão de organização com to-do list, pomodoro e notas, que podem ser exportadas em PDF.',
+    linkProjeto: 'https://github.com/nicius2/Extensao-focoja',
+    repositorio: 'https://github.com/nicius2/Extensao-focoja'
   },
   {
     id: '#',
-    title: "Dashboard Analytics",
-    tecnologias: ['React', 'Node.js', 'MongoDB'],
-    img: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop&crop=entropy&auto=format",
+    title: "API Rest - Delivery",
+    tecnologias: ['Node.js', 'Express', 'Typescript', 'Prisma', "Postgress", 'Docker', 'JWT', 'Zod', 'Jest'],
+    img: "https://i.ibb.co/355GqJwj/image-16.jpg",
     videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4",
-    description: 'Sistema completo de analytics com visualizações interativas.'
+    description: 'Sistema completo de analytics com visualizações interativas.',
+    linkProjeto: 'https://github.com/nicius2/delivery-security',
+    repositorio: 'https://github.com/nicius2/delivery-security'
   },
   {
     id: '#',
-    title: "E-commerce Platform",
-    tecnologias: ['Vue.js', 'Firebase', 'GraphQL'],
-    img: "https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=600&h=400&fit=crop&crop=entropy&auto=format",
+    title: "Gerenciamento de Biblioteca",
+    tecnologias: ['Java', 'Logica de Programação'],
+    img: "https://i.ibb.co/kVkFVcDd/image-16-1.jpg",
     videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4",
-    description: 'Plataforma completa de e-commerce com pagamentos integrados.'
+    description: 'Plataforma completa de e-commerce com pagamentos integrados.',
+    linkProjeto: 'https://github.com/nicius2/Gerenciamento-de-biblioteca',
+    repositorio: 'https://github.com/nicius2/Gerenciamento-de-biblioteca'
   },
 ];
 
@@ -227,10 +230,15 @@ export function FeaturedWorks() {
                     <div className="flex flex-col gap-4">
                       <div className="flex gap-4 items-center">
                         <h2 className="text-white text-2xl font-medium flex-1">{item.title}</h2>
-                        <button className="flex gap-2 items-center py-2 text-sm md:px-4 cursor-pointer px-2 rounded-sm bg-white hover:bg-gray-100 transition-colors">
+                        <a
+                          href={item.linkProjeto}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="flex gap-2 items-center py-2 text-sm md:px-4 cursor-pointer px-2 rounded-sm bg-white hover:bg-gray-100 transition-colors"
+                        >
                           <span className="hidden md:flex">Ver Projeto</span>
                           <ExternalLink className="w-4 h-4" />
-                        </button>
+                        </a>
                       </div>
                       <p className="text-sm text-white/80">{item.description}</p>
 
@@ -324,13 +332,13 @@ export function FeaturedWorks() {
                   ))}
                 </div>
                 <div className="flex gap-3">
-                  <button className="px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-colors flex items-center gap-2">
+                  <a href={selectedProject.linkProjeto} target="_blank" rel="noopener noreferrer" className="px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-colors flex items-center gap-2">
                     <ExternalLink className="w-4 h-4" />
                     Ver Projeto
-                  </button>
-                  <button className="px-4 py-2 bg-gray-700 hover:bg-gray-600 text-white rounded-lg transition-colors">
+                  </a>
+                  <a href={selectedProject.repositorio} target="_blank" rel="noopener noreferrer" className="px-4 py-2 bg-gray-700 hover:bg-gray-600 text-white rounded-lg transition-colors">
                     GitHub
-                  </button>
+                  </a>
                 </div>
               </div>
             </motion.div>
