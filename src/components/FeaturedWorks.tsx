@@ -179,7 +179,7 @@ export function FeaturedWorks() {
                   key={index}
                   className="w-full md:w-1/2 flex-shrink-0"
                 >
-                  <div className="p-4 md:p-6 flex flex-col border-[0.5px] gap-4 backdrop-blur-[1.5px] bg-white/4 border-[#919191]/30 rounded-3xl mx-2 hover:border-[#919191]/50 transition-all duration-300">
+                  <div className="p-4 md:p-6 flex flex-col border-[0.5px] h-full min-h-[500px] gap-4 backdrop-blur-[1.5px] bg-white/4 border-[#919191]/30 rounded-3xl mx-2 hover:border-[#919191]/50 transition-all duration-300">
 
                     <div
                       className="relative flex justify-center items-center overflow-hidden rounded-lg group cursor-pointer"
