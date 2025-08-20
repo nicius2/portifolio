@@ -158,6 +158,12 @@
 
 body {
     scroll-behavior: smooth;
+    cursor: url('./assets/cursor.svg'), auto;
+}
+
+a,
+button {
+    cursor: url('./assets/custom-pointer.png'), pointer;
 }
 
 /* Regras de media query */

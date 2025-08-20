@@ -24,7 +24,7 @@ export function Academico() {
             </div>
 
             <a
-                href="https://seulink.com/certificados"
+                href="https://cursos.alura.com.br/user/marco-marks06/fullCertificate/b7137d4d21327edb937a579b198bf173"
                 className="w-fit px-6 py-2 mt-6 rounded-md text-sm font-semibold bg-white text-zinc-900"
                 target="_blank"
                 rel="noopener noreferrer"

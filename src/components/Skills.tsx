@@ -15,7 +15,7 @@ export function Skills() {
                 <span><img src={imgSkills} alt="icone de ferramenta" className="w-10" /></span>
             </div>
 
-            <div className="flex items-start flex-col">
+            <div className="flex items-center flex-col">
 
                 <div className="flex flex-col gap-2 border-[0.5px] p-10 backdrop-blur-[1.5px] bg-white/4 border-[#919191]/30 rounded-2xl mx-2">
                     <h3 className="text-2xl font-semibold text-white">Tech</h3>

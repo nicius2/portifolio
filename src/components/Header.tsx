@@ -50,6 +50,8 @@ export function Header() {
               initial={{ opacity: 0, y: 40 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.9, delay: 0.4, ease: "easeOut" }}
+              target="_blank"
+              rel="noopener noreferrer"
             >
               <div className="w-full h-full flex gap-2 px-3.5 py-2 rounded-[6px] gradient-button-fill text-zinc-900 justify-center items-center">
                 <span className="font-semibold text-shadow">Baixar Curriculo</span>
