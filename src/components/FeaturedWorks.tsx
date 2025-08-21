@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence, type PanInfo } from "framer-motion";
 import { Play, X, Maximize2, ExternalLink } from "lucide-react";
 
 const featuredWorksData = [
@@ -43,7 +43,6 @@ export function FeaturedWorks() {
   const [selectedProject, setSelectedProject] = useState<typeof featuredWorksData[0] | null>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
-  // SOLUÇÃO: Tipar o useRef com Record<string, HTMLVideoElement>
   const videoRefs = useRef<Record<string, HTMLVideoElement>>({});
   const modalVideoRef = useRef<HTMLVideoElement>(null);
 
@@ -67,7 +66,6 @@ export function FeaturedWorks() {
     setOffset((prev) => prev - 1);
   };
 
-  // Animação automática que pausa no hover
   useEffect(() => {
     if (!isHovered) {
       const interval = setInterval(() => {
@@ -80,7 +78,10 @@ export function FeaturedWorks() {
 
   const slidePercentage = isMobile ? 100 : 50;
 
-  const handleDragEnd = (_event: any, info: any) => {
+  const handleDragEnd = (
+    _event: MouseEvent | TouchEvent | PointerEvent,
+    info: PanInfo
+  ) => {
     const swipeThreshold = 50;
     if (info.offset.x > swipeThreshold) {
       prevSlide();
@@ -89,8 +90,6 @@ export function FeaturedWorks() {
     }
   };
 
-  // Funções para controle de vídeo
-  // SOLUÇÃO: Tipar os parâmetros `projectId` e `isEntering`
   const handleImageHover = (projectId: string, isEntering: boolean) => {
     if (isEntering) {
       setHoveredProject(projectId);
@@ -100,7 +99,6 @@ export function FeaturedWorks() {
         video.play().catch(() => { });
       }
     } else {
-      // SOLUÇÃO: Usar `hoveredProject` para pausar o vídeo
       if (hoveredProject) {
         const video = videoRefs.current[hoveredProject];
         if (video) {
@@ -166,7 +164,8 @@ export function FeaturedWorks() {
           onMouseEnter={() => setIsHovered(true)}
           onMouseLeave={() => handleImageHover("no-id", false)}
         >
-          <div className="overflow-hidden relative h-auto w-full">
+          {/* 🔥 ajuste de largura para mobile */}
+          <div className="overflow-hidden relative h-auto w-10/12 md:max-w-full max-w-sm mx-auto md:w-full">
             <motion.div
               className="flex w-full"
               drag={isMobile ? "x" : false}
@@ -179,10 +178,10 @@ export function FeaturedWorks() {
                   key={index}
                   className="w-full md:w-1/2 flex-shrink-0"
                 >
-                  <div className="p-4 md:p-6 flex flex-col border-[0.5px] h-full min-h-[500px] gap-4 backdrop-blur-[1.5px] bg-white/4 border-[#919191]/30 rounded-3xl mx-2 hover:border-[#919191]/50 transition-all duration-300">
+                  <div className="p-4 flex flex-col border-[0.5px] h-full gap-4 backdrop-blur-[1.5px] bg-white/4 border-[#919191]/30 rounded-3xl mx-2 hover:border-[#919191]/50 transition-all duration-300 md:p-6">
 
                     <div
-                      className="relative flex justify-center items-center overflow-hidden rounded-lg group cursor-pointer"
+                      className="relative flex justify-center items-center overflow-hidden rounded-lg group cursor-pointer w-full h-40 md:h-64"
                       onMouseEnter={() => handleImageHover(item.title, true)}
                       onMouseLeave={() => handleImageHover(item.title, false)}
                       onClick={() => openModal(item)}
@@ -190,7 +189,7 @@ export function FeaturedWorks() {
                       <img
                         src={item.img}
                         alt={item.title}
-                        className={`w-full h-auto object-contain transition-opacity duration-300 ${hoveredProject === item.title ? 'opacity-0' : 'opacity-100'
+                        className={`w-full h-full object-cover transition-opacity duration-300 ${hoveredProject === item.title ? 'opacity-0' : 'opacity-100'
                           }`}
                       />
 
@@ -227,14 +226,14 @@ export function FeaturedWorks() {
                       </button>
                     </div>
 
-                    <div className="flex flex-col gap-4">
-                      <div className="flex gap-4 items-center">
-                        <h2 className="text-white text-2xl font-medium flex-1">{item.title}</h2>
+                    <div className="flex flex-col gap-3 md:gap-4">
+                      <div className="flex gap-2 md:gap-4 items-center">
+                        <h2 className="text-xl md:text-2xl font-medium flex-1 text-white">{item.title}</h2>
                         <a
                           href={item.linkProjeto}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="flex gap-2 items-center py-2 text-sm md:px-4 cursor-pointer px-2 rounded-sm bg-white hover:bg-gray-100 transition-colors"
+                          className="flex gap-1 items-center py-1 text-xs px-2 md:py-2 md:text-sm md:px-4 cursor-pointer rounded-sm bg-white hover:bg-gray-100 transition-colors"
                         >
                           <span className="hidden md:flex">Ver Projeto</span>
                           <ExternalLink className="w-4 h-4" />
@@ -242,11 +241,11 @@ export function FeaturedWorks() {
                       </div>
                       <p className="text-sm text-white/80">{item.description}</p>
 
-                      <div className="flex flex-wrap gap-2">
+                      <div className="flex flex-wrap gap-1 md:gap-2">
                         {item.tecnologias.map((tech, techIndex) => (
                           <span
                             key={techIndex}
-                            className="backdrop-blur-[1.5px] bg-white/4 border-[0.5px] border-transparent transition ease-linear hover:border-[#919191]/30 text-gray-300 px-3 py-1 rounded-full text-sm font-medium"
+                            className="backdrop-blur-[1.5px] bg-white/4 border-[0.5px] border-transparent transition ease-linear hover:border-[#919191]/30 text-gray-300 px-2 py-0.5 rounded-full text-xs font-medium"
                           >
                             {tech}
                           </span>
