@@ -57,7 +57,7 @@ export function SobreMim() {
                     </p>
                     <p className={`${!showMore ? "hidden md:block" : ""}`}>
                         Ao longo da minha trajetória, venho desenvolvendo tanto habilidades
-                        técnicas (hard skills) quanto comportamentais (soft skills), sempre
+                        técnicas (soft skills) quanto comportamentais (hard skills), sempre
                         buscando ir além do código e contribuir ativamente para os projetos
                         e para a equipe da qual faço parte.
                     </p>
