@@ -47,7 +47,7 @@ const featuredWorksData = [
     id: '#',
     title: "Agendamento Petshop (Front consumindo api)",
     tecnologias: ['Javascript', 'Buble', 'Webpack', 'HTML', "Css", "Node"],
-    img: "https://private-user-images.githubusercontent.com/105683577/411692326-a976fe18-3abd-4e2b-959e-62402d749d69.png?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NTU4NzcxMTEsIm5iZiI6MTc1NTg3NjgxMSwicGF0aCI6Ii8xMDU2ODM1NzcvNDExNjkyMzI2LWE5NzZmZTE4LTNhYmQtNGUyYi05NTllLTYyNDAyZDc0OWQ2OS5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjUwODIyJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI1MDgyMlQxNTMzMzFaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT04YzA1MGQ5MWVhMWUwZGZkZjJiY2NjZDk0MThhZjNmMjExNDZlNTY3MGI5NWIyYmUxNWYwMTBjMGZjMjMxZThlJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.fYroxRT0wYwOmZRdFLTkpEPjysKvTwA8mWEJ1oawZiA",
+    img: "https://aw6znvsusli6h8pi.public.blob.vercel-storage.com/petshop.png",
     videoUrl: "",
     description: 'Sistema completo para agendamento de petshop',
     linkProjeto: 'https://github.com/nicius2/Agendamento-de-Petshop',
