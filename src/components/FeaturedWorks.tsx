@@ -15,6 +15,16 @@ const featuredWorksData = [
   },
   {
     id: '#',
+    title: "Dashboard - Quantum (previsao de SKUs)",
+    tecnologias: ['React', 'Tailwindcss','Typescript', 'Python', "Pandas"],
+    img: "https://aw6znvsusli6h8pi.public.blob.vercel-storage.com/descongelamento.png",
+    videoUrl: "https://aw6znvsusli6h8pi.public.blob.vercel-storage.com/dashboard.mp4",
+    description: 'Dashboard feito para o processo de previsão do descongelamento de frangos (SKUs)',
+    linkProjeto: 'https://dashboard-matheus-done.vercel.app/',
+    repositorio: 'https://dashboard-matheus-done.vercel.app/'
+  },
+  {
+    id: '#',
     title: "API Rest - Delivery",
     tecnologias: ['Node.js', 'Express', 'Typescript', 'Prisma', "Postgress", 'Docker', 'JWT', 'Zod', 'Jest'],
     img: "https://i.ibb.co/355GqJwj/image-16.jpg",
@@ -22,6 +32,16 @@ const featuredWorksData = [
     description: 'Api para processo de pedido e entrega ao cliente, pedido feito, processando e entrega',
     linkProjeto: 'https://github.com/nicius2/delivery-security',
     repositorio: 'https://github.com/nicius2/delivery-security'
+  },
+  {
+    id: '#',
+    title: "IA Agente de controle financeiro - chat",
+    tecnologias: ['N8N', 'Supabase', 'React', 'Docker', "Typescript",],
+    img: "https://aw6znvsusli6h8pi.public.blob.vercel-storage.com/Screenshot%202025-08-22%20at%2014-02-42%20Como%20criar%20um%20agente%20aut%C3%B4nomo%20usando%20n8n%20e%20l%C3%B3gica%20condicional.png",
+    videoUrl: "",
+    description: 'Agente de ia para controle financeiro, controlar todos os gastos e mostra no Dashboard interativo',
+    linkProjeto: '',
+    repositorio: ''
   },
     {
     id: '#',
