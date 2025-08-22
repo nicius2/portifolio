@@ -2,12 +2,13 @@ import imgEducacao from "../assets/imgEducacao.svg";
 import imgJovemTech from "../assets/imgTech.svg";
 
 const experienceData = [
-    { id: '#', img: imgEducacao, title: 'Software Developer Mobile', ano: '(jan 2021 -  fev 2023)', subTitle: 'Secretária de Educação de Paulino Neves', descrição: ['- Desenvolvedor  de interface interativas usando React Native e Figma', '- Manuntenção de Código em React Native, Typescript e banco de Dados no Supabase'] },
     {
         id: '#', img: imgJovemTech, title: 'Bolsista Jovem Tech', ano: '(maio 2025 - o momento)', subTitle: 'Aprimoramento com treinamentos em competências técnicas e habilidades comportamentais', descrição: ['- Estudo e projetos reais com criação e implementação de APIs REST com Java',
             '- Projetos com elaboração de interface usando React para consumir API e apresentar dados de forma interativa e responsiva ao usuário',
             '- Desenvolvimento de Tasks usando metodologias Ágeis.']
-    }
+    },
+    { id: '#', img: imgEducacao, title: 'Software Developer Mobile', ano: '(jan 2021 -  fev 2023)', subTitle: 'Secretária de Educação de Paulino Neves', descrição: ['- Desenvolvedor  de interface interativas usando React Native e Figma', '- Manuntenção de Código em React Native, Typescript e banco de Dados no Supabase'] }
+    
 ]
 
 
