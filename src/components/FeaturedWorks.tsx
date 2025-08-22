@@ -8,7 +8,7 @@ const featuredWorksData = [
     title: "Extensão Foco Já",
     tecnologias: ['React', 'Tailwindcss', 'Figma', 'Typescript'],
     img: "https://i.ibb.co/bRC6MLbj/image-2.jpg",
-    videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4",
+    videoUrl: "https://aw6znvsusli6h8pi.public.blob.vercel-storage.com/download%20%2814%29.mp4",
     description: 'Extensão de organização com to-do list, pomodoro e notas, que podem ser exportadas em PDF.',
     linkProjeto: 'https://github.com/nicius2/Extensao-focoja',
     repositorio: 'https://github.com/nicius2/Extensao-focoja'
@@ -18,7 +18,7 @@ const featuredWorksData = [
     title: "API Rest - Delivery",
     tecnologias: ['Node.js', 'Express', 'Typescript', 'Prisma', "Postgress", 'Docker', 'JWT', 'Zod', 'Jest'],
     img: "https://i.ibb.co/355GqJwj/image-16.jpg",
-    videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4",
+    videoUrl: "",
     description: 'Sistema completo de analytics com visualizações interativas.',
     linkProjeto: 'https://github.com/nicius2/delivery-security',
     repositorio: 'https://github.com/nicius2/delivery-security'
@@ -28,7 +28,7 @@ const featuredWorksData = [
     title: "Gerenciamento de Biblioteca",
     tecnologias: ['Java', 'Logica de Programação'],
     img: "https://i.ibb.co/kVkFVcDd/image-16-1.jpg",
-    videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4",
+    videoUrl: "",
     description: 'Plataforma completa de e-commerce com pagamentos integrados.',
     linkProjeto: 'https://github.com/nicius2/Gerenciamento-de-biblioteca',
     repositorio: 'https://github.com/nicius2/Gerenciamento-de-biblioteca'

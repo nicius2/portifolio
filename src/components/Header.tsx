@@ -4,7 +4,6 @@ import { EmojiDevelopment } from "./EmojiDevelopment";
 import { ArrowDown } from "lucide-react";
 import meuEmoji from "../assets/emojiVini.svg";
 import fotoDePerfil from "../assets/Foto-de-Perfil-Desktop.svg";
-import fotoDePerfilMobile from "../assets/Foto-de-Perfil-Mobile.svg";
 import iconDownload from "../assets/download.svg";
 import { AnimateScroll } from "../hooks/animateScroll";
 import { motion } from "framer-motion";
@@ -87,7 +86,7 @@ export function Header() {
         <EmojiDevelopment meuEmoji={meuEmoji} titulo="Desenvolvedor Full-Stack" />
 
         <div className="flex mt-4 justify-center">
-          <img src={fotoDePerfilMobile} alt="foto de perfil mobile" className="w-30" />
+          <img src="https://aw6znvsusli6h8pi.public.blob.vercel-storage.com/perfilNavbar.svg" alt="foto de perfil mobile" className="w-30" />
         </div>
 
         <h1 className="mt-7 flex justify-center text-center w-[300px] text-white font-semibold text-xl tracking-[0.50px]">

@@ -3,7 +3,6 @@ import { AnimatePresence, motion } from 'framer-motion';
 
 import github from '../assets/github.svg';
 import linkedin from '../assets/linkedin.svg';
-import imgPerfilNavbar from '../assets/perfilNavbar.svg';
 import backgroundPraia from "../assets/background.mp4";
 
 import { ResponsiveNavbar } from './responsiveNavbar';
@@ -99,7 +98,7 @@ export function Navbar() {
 
         {/* Navbar Mobile */}
         <div className="md:hidden flex items-center justify-between gap-10 relative z-10">
-          <img src={imgPerfilNavbar} alt="Perfil" className="w-10 h-10" />
+          <img src="https://aw6znvsusli6h8pi.public.blob.vercel-storage.com/perfilNavbar.svg" alt="Perfil" className="w-10 h-10" />
           <div className="flex gap-1">
             <NavItem>
               <a href="https://github.com/nicius2" target="_blank" rel="noopener noreferrer">

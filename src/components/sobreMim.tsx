@@ -1,5 +1,4 @@
 import { useState } from "react"
-import imgSobre from "../assets/perfilSobre.svg"
 import { Heart } from "lucide-react"
 
 export function SobreMim() {
@@ -33,7 +32,7 @@ export function SobreMim() {
                     {/* Imagem + texto */}
                     <div className="flex items-center">
                         <img
-                            src={imgSobre}
+                            src="https://aw6znvsusli6h8pi.public.blob.vercel-storage.com/perfilSobre.svg"
                             alt="sobre mim"
                             className="w-24 h-24 rounded-3xl border-b-[0.5px] border-[#919191]"
                         />
